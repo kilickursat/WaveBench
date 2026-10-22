@@ -1,0 +1,147 @@
+{
+  "schema": "wavebench.recipe/1",
+  "application": {
+    "name": "WaveBench",
+    "version": "0.1.0"
+  },
+  "created": "2026-10-22T05:50:17.914Z",
+  "input": {
+    "kind": "example",
+    "name": "acceleration-raw.csv",
+    "bytes": 378593,
+    "sha256": "c965b673c9fce3035b9180016be38c47229f9f48ea3e6164369f607e07455281",
+    "rows": 8192,
+    "columns": [
+      "ax_g",
+      "ay_g",
+      "az_g"
+    ],
+    "parse": {
+      "delimiter": ",",
+      "decimal": ".",
+      "skipLines": 0,
+      "hasHeader": true,
+      "columnKinds": [
+        "number",
+        "number",
+        "number"
+      ]
+    },
+    "generator": null
+  },
+  "record": {
+    "channels": [
+      {
+        "column": "ax_g",
+        "label": "ax_g",
+        "enabled": true,
+        "offset": 0,
+        "gain": 1
+      },
+      {
+        "column": "ay_g",
+        "label": "ay_g",
+        "enabled": true,
+        "offset": 0,
+        "gain": 1
+      },
+      {
+        "column": "az_g",
+        "label": "az_g",
+        "enabled": true,
+        "offset": 0,
+        "gain": 1
+      }
+    ],
+    "unit": "g",
+    "displayUnit": "g",
+    "timebase": {
+      "mode": "rate",
+      "sampleRateHz": 1024,
+      "startSec": 0
+    },
+    "rows": {
+      "start": 0,
+      "end": 8192
+    },
+    "magnitude": false
+  },
+  "resolved": {
+    "samples": 8192,
+    "sampleRateHz": 1024,
+    "startSec": 0,
+    "rateSource": "assigned",
+    "timestampQuality": null
+  },
+  "processing": {
+    "steps": [
+      {
+        "kind": "filter",
+        "enabled": false,
+        "spec": {
+          "family": "butterworth",
+          "response": "lowpass",
+          "order": 4,
+          "cutoffHz": 100
+        },
+        "mode": "zero-phase",
+        "initial": "zero",
+        "padding": "odd"
+      }
+    ],
+    "filters": []
+  },
+  "interval": {
+    "startSample": 0,
+    "endSample": 8192
+  },
+  "analyses": {
+    "signal": "processed",
+    "fft": {
+      "window": "hann",
+      "detrend": "constant",
+      "fftLength": "pow2",
+      "output": "peak",
+      "yScale": "linear",
+      "xScale": "linear",
+      "phase": false
+    },
+    "welch": {
+      "window": "hann",
+      "windowLength": 1024,
+      "overlapPercent": 50,
+      "fftFactor": 1,
+      "detrend": "constant",
+      "output": "psd",
+      "yScale": "log",
+      "xScale": "linear",
+      "bandLow": null,
+      "bandHigh": null
+    },
+    "stft": {
+      "window": "hann",
+      "windowLength": 1024,
+      "overlapPercent": 75,
+      "fftFactor": 1,
+      "detrend": "constant",
+      "channel": "c0",
+      "quantity": "psd",
+      "colormap": "viridis",
+      "rangeDb": 80,
+      "topDb": null
+    }
+  },
+  "compute": {
+    "preference": "auto"
+  },
+  "conventions": {
+    "windows": "periodic (DFT-even) generalised cosine windows, coefficients of scipy.signal.windows",
+    "spectrum": "X[k] = sum w[n] u[n] exp(-2 pi i k n / M); one-sided, C[k] = 1 at DC and even-M Nyquist, else 2",
+    "amplitude": "peak = C|X| / |sum w|; rms = peak / sqrt(2) except DC and even-M Nyquist; power = C|X|^2 / (sum w)^2",
+    "psd": "C|X|^2 / (fs sum w^2), unit^2/Hz; Welch = arithmetic mean of complete-frame PSDs",
+    "frames": "complete frames only; frame p covers [pH, pH + L); time = start + (pH + L/2) / fs",
+    "detrend": "per segment or frame, as scipy.signal.detrend (constant: mean, linear: least-squares line)",
+    "filters": "Butterworth by bilinear transform with pre-warped edges (scipy.signal.butter), second-order sections; notch as scipy.signal.iirnotch (Q = f0 / -3 dB width); zero-phase = forward-backward with scipy.signal.sosfiltfilt padding",
+    "decibels": "10 log10(P / 1 unit^2[/Hz]) for power-like values, 20 log10(A / 1 unit[/sqrt Hz]) for amplitudes"
+  }
+}

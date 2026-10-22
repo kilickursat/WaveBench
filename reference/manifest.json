@@ -1,0 +1,33 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "seed": 20261022,
+  "example": {
+    "synthetic": true,
+    "sampleRateHz": 1024.0,
+    "samplesPerChannel": 8192,
+    "unit": "g",
+    "origin": "generated, not observed"
+  },
+  "filesSha256": {
+    "examples/acceleration-raw.csv": "c965b673c9fce3035b9180016be38c47229f9f48ea3e6164369f607e07455281",
+    "examples/acceleration-with-time.csv": "676664f59abcd400539169702ee4a1af230201be78453ee8dea274e3d393bd7b",
+    "examples/example.recipe.json": "7c83c41110adf70601e0d314c741ac97347d367c3460b0b14be914ddb8ed45ca",
+    "reference/generate_fixtures.py": "68a34e9e556c1706e300a9e678874b1bdcf777cd67ab32d001321165a382770c",
+    "reference/requirements.txt": "e5698b55553133cbcdbcb05c5b953f60c8246df0b65930d95e8ea77112e09e52",
+    "tests/fixtures/butterworth-golden.json": "89d017e20525e0db178e5db3069fa5a8c23de49841a28ba1b9b8ff2ec5e1b201",
+    "tests/fixtures/detrend-golden.json": "cc1c1f03a9e8dc0939292314cd11f316a4a99e0dd3eabf499ea7910dbf940971",
+    "tests/fixtures/fft-golden.json": "99bdbf5f8fce0730c8c73959427e950b5a4c118209af64e6033439326d6d95c6",
+    "tests/fixtures/filter-golden.json": "b7931cf8af7cac4d03090e6cc496f61044e74251176d555486187d1906070403",
+    "tests/fixtures/spectra-golden.json": "e5158665a9c190335f08cbe9d868ffd95d03765017edd56e6670f6077c74d9bc",
+    "tests/fixtures/spectrum-extra-golden.json": "e51677b1f6d97e707fb0ec4527399e28d2158ed9f75b5df0b0b3dde36d8da620",
+    "tests/fixtures/stats-golden.json": "34363d6bbd77c330cbdbc06775c44ff30852c7560862d1b5c4d5c0e5d0572cb5",
+    "tests/fixtures/stft-golden.json": "4377ab7c8141eeafb744aef2294a14103a3d409845622a4ae5a8579eb700a855",
+    "tests/fixtures/stft-welch-golden.json": "6daed3dc539d4026c1f5c231a792161fe158a8a3df2c726c243fddb12f6c1867",
+    "tests/fixtures/welch-golden.json": "caf819d30c7c02a5ce664a0abc459a0f6798e4662cfb9b74f9bfc4d8c104e338",
+    "tests/fixtures/windows-golden.json": "93ad7d841d25b7f3f4ab3e5f53fb04f5e62fa2493f95406f95e544285fa2ad4d"
+  }
+}

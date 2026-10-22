@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "types": ["@webgpu/types", "vite/client", "node"],
+    "paths": {
+      "@wavebench/core": ["./packages/core/src/index.ts"],
+      "@wavebench/dsp-cpu": ["./packages/dsp-cpu/src/index.ts"],
+      "@wavebench/dsp-webgpu": ["./packages/dsp-webgpu/src/index.ts"],
+      "@wavebench/plots": ["./packages/plots/src/index.ts"]
+    }
+  },
+  "include": ["packages/*/src", "apps/web/src", "apps/web/vite.config.ts", "tests/unit", "vitest.config.ts", "aliases.ts"]
+}
