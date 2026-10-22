@@ -1,0 +1,26 @@
+name: Bug report
+description: Something is wrong or confusing
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Steps to reproduce, what you expected, and what you saw.
+    validations:
+      required: true
+  - type: textarea
+    id: numbers
+    attributes:
+      label: Numbers (if a result looks wrong)
+      description: The value WaveBench shows, the value you expected, and where the expectation comes from (another tool, a formula).
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: e.g. Chrome 140 on Windows 11, WebGPU on
+  - type: textarea
+    id: files
+    attributes:
+      label: Files
+      description: If possible attach a small CSV (synthetic is fine) and the recipe from Export → Save recipe. No confidential data.

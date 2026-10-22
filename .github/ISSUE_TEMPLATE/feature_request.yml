@@ -1,0 +1,16 @@
+name: Feature request
+description: An analysis, format or improvement you need
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What do you need to do?
+      description: The task, the data (sensor, rate, length) and what you do today instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Reference
+      description: The method or standard you expect (a paper, a SciPy function, a norm), so the result can be validated.

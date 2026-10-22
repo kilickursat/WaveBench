@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: User guide
+    url: https://github.com/kilickursat/WaveBench/blob/main/docs/USER_GUIDE.md
+    about: How to import data, filter and analyse
+  - name: Security report
+    url: https://github.com/kilickursat/WaveBench/blob/main/SECURITY.md
+    about: Please report security problems privately

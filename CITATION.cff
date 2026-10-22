@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use WaveBench in your work, please cite it as below."
+title: "WaveBench: signal processing in the browser for accelerometer and sensor records"
+type: software
+authors:
+  - family-names: Kilic
+    given-names: Kursat
+version: 0.1.0
+date-released: 2026-10-22
+license: Apache-2.0
+repository-code: "https://github.com/kilickursat/WaveBench"
+url: "https://kilickursat.github.io/WaveBench/"
+abstract: >-
+  WaveBench is an open-source signal-processing workbench that runs in the web browser. It imports raw sensor records
+  such as 3-axis accelerometer logs, checks or assigns their timebase, applies Butterworth and notch filters, and
+  computes FFT spectra, Welch power spectral densities and STFT spectrograms. Analyses run in Float64 on the CPU,
+  validated against SciPy and 50-digit references, or in Float32 with WebGPU compute shaders validated against the
+  Float64 engine.
+keywords:
+  - signal processing
+  - FFT
+  - STFT
+  - spectrogram
+  - power spectral density
+  - Welch method
+  - Butterworth filter
+  - accelerometer
+  - vibration analysis
+  - WebGPU
