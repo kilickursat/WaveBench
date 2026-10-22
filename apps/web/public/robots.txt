@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kilickursat.github.io/WaveBench/sitemap.xml

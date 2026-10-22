@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WaveBench – FFT, PSD and spectrograms for accelerometer data in the browser</title>
+    <meta name="description" content="Free, open-source signal processing in the browser for 3-axis accelerometer, vibration and other sensor records: sampling rate and timebase checks, Butterworth and notch filters, FFT spectra, Welch PSD and STFT spectrograms. WebGPU compute with a Float64 reference validated against SciPy. Your data never leaves your computer." />
+    <meta name="keywords" content="signal processing, FFT, STFT, spectrogram, power spectral density, PSD, Welch method, Butterworth filter, notch filter, accelerometer, vibration analysis, 3-axis acceleration, sensor data, time-frequency analysis, WebGPU, online FFT tool, spectrum analyzer" />
+    <meta name="author" content="Kursat Kilic" />
+    <meta name="theme-color" content="#1c5cab" />
+    <link rel="canonical" href="https://kilickursat.github.io/WaveBench/" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%231c5cab'/%3E%3Cpath d='M3 12h3l2-5 3.5 11L15 6l2.5 6H21' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="WaveBench" />
+    <meta property="og:title" content="WaveBench – signal analysis for accelerometer data in the browser" />
+    <meta property="og:description" content="Import raw sensor records, check the timebase, filter, and analyse with FFT, Welch PSD and STFT spectrograms. WebGPU compute, Float64 reference validated against SciPy, no uploads." />
+    <meta property="og:url" content="https://kilickursat.github.io/WaveBench/" />
+    <meta property="og:image" content="https://kilickursat.github.io/WaveBench/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WaveBench – signal analysis for accelerometer data in the browser" />
+    <meta name="twitter:description" content="FFT, Welch PSD, STFT spectrograms and Butterworth filters for raw sensor records. Open source, runs locally, WebGPU accelerated." />
+    <meta name="twitter:image" content="https://kilickursat.github.io/WaveBench/og.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "WaveBench",
+        "url": "https://kilickursat.github.io/WaveBench/",
+        "applicationCategory": "ScientificApplication",
+        "operatingSystem": "Any (web browser)",
+        "description": "Open-source signal-processing workbench in the browser for 3-axis accelerometer and other sensor records: timebase checks, Butterworth and notch filters, FFT spectra, Welch PSD and STFT spectrograms, with WebGPU compute and a Float64 reference validated against SciPy.",
+        "author": { "@type": "Person", "name": "Kursat Kilic" },
+        "license": "https://www.apache.org/licenses/LICENSE-2.0",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "sameAs": "https://github.com/kilickursat/WaveBench",
+        "keywords": "signal processing, FFT, STFT, spectrogram, PSD, Welch, Butterworth filter, accelerometer, vibration analysis, WebGPU"
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>WaveBench is a JavaScript application for signal analysis in the browser; please enable JavaScript.</noscript>
+    <div id="root"></div>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>
